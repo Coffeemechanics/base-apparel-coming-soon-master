@@ -1,0 +1,231 @@
+:root {
+  --desaturated_red: hsl(0, 36%, 70%);
+  --soft_red: hsl(0, 93%, 68%);
+  --dark_grayish_red: hsl(0, 6%, 24%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.attribution {
+  font-size: 12px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: "Josefin Sans", sans-serif;
+  background: url(./images/bg-pattern-desktop.svg);
+}
+.main {
+  display: flex;
+  width: 100%;
+}
+.no-img-section {
+  background: url(./images/bg-pattern-desktop.svg),
+    linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 64%;
+}
+.logo {
+  width: 10rem;
+  margin-top: 4rem;
+  margin-left: 10.25rem;
+  margin-bottom: 8.625rem;
+}
+.text-section {
+  margin-left: 10.25rem;
+  display: flex;
+  flex-direction: column;
+}
+.text-section h1 {
+  font-size: 3.7rem;
+  width: 22.5rem;
+  line-height: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 1.2rem;
+  margin-bottom: 2rem;
+}
+.text-section span {
+  font-weight: 300;
+  color: var(--desaturated_red);
+}
+.text-section p {
+  width: 26.75rem;
+  color: var(--desaturated_red);
+  line-height: 1.6rem;
+}
+.input-field {
+  margin-left: 10.25rem;
+}
+.img-section {
+  width: auto;
+  height: 100vh;
+}
+.img-section img {
+  height: 100vh;
+  float: right;
+}
+.hero-mobile {
+  display: none;
+}
+.invalid {
+  border: 2px solid var(--soft_red);
+}
+/* overwritten the email-field, warning will be given if the email is invalid and classlist "email-field" will be removed. */
+.email-field {
+  border: 1px solid var(--desaturated_red);
+}
+input[type="email"] {
+  width: 27.75rem;
+  height: 3.4375rem;
+  border-radius: 26px;
+  margin-top: 3.1875rem;
+
+  border-image: none;
+  padding-left: 2rem;
+}
+input[type="email"]::placeholder {
+  color: var(--desaturated_red);
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 15px;
+}
+input[type="email"]:focus {
+  outline: none;
+  border: 1px solid var(--desaturated_red);
+  font-family: "Josefin Sans", sans-serif;
+}
+.send-button {
+  width: 6.3125rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f8b8b8+0,f39190+100 */
+  background: #f8b8b8; /* Old browsers */
+  background: -moz-linear-gradient(
+    45deg,
+    #f8b8b8 0%,
+    #f39190 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    45deg,
+    #f8b8b8 0%,
+    #f39190 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    45deg,
+    #f8b8b8 0%,
+    #f39190 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8b8b8', endColorstr='#f39190',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+  height: 3.4375rem;
+  border-radius: 26px;
+  position: relative;
+  left: 343px;
+  top: -55px;
+  box-shadow: 0 5px 20px 3px hsl(0, 80%, 86%);
+}
+.send-button:hover {
+  cursor: pointer;
+  filter: brightness(1.25);
+}
+.error-warning {
+  /* if the email is invalid, the display will change to block */
+  position: relative;
+  display: none;
+  top: -95px;
+  margin-left: 19rem;
+}
+#textError-warning {
+  position: relative;
+  top: -70px;
+  left: 31px;
+  color: var(--soft_red);
+  font-size: 14px;
+}
+@media screen and (max-width: 1100px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url(./images/bg-pattern-desktop.svg);
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .img-section {
+    width: 100%;
+    height: auto;
+  }
+  .logo {
+    margin: 0;
+    margin-bottom: 2rem;
+    margin-right: auto;
+    margin-left: 2rem;
+  }
+  .hero-desktop {
+    display: none;
+  }
+  .hero-mobile {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .no-img-section {
+    margin: 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+  }
+  .text-section {
+    display: flex;
+    margin: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 58.375%;
+    text-align: center;
+  }
+
+  .text-section h1 {
+    margin: 0;
+    margin-top: 5.5rem;
+  }
+  .text-section p {
+    margin: 0;
+    font-size: 14px;
+    width: 18.5rem;
+    margin-top: 1.625rem;
+  }
+  .input-field {
+    margin: 0;
+  }
+}
